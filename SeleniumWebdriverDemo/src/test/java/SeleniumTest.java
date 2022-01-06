@@ -20,6 +20,21 @@ public class SeleniumTest {
 		driver.findElement(By.xpath("*//input[@placeholder='First Name']")).sendKeys("Mehedi Hasan");
 		driver.findElement(By.xpath("*//input[@placeholder='Last Name']")).sendKeys("Rony");
 		
+		//Entering into Textarea
+		driver.findElement(By.xpath("*//textarea[@ng-model=\"Adress\"]")).sendKeys("This is Textarea This is Textarea This is Textarea");
+		
+		//Entering into Email
+		driver.findElement(By.xpath("*//input[@ng-model = 'EmailAdress']")).sendKeys("mehedi@gmail.com");
+		
+		//Entering into Phone Number
+		driver.findElement(By.xpath("*//input[@ng-model='Phone']")).sendKeys("0168270663");
+		
+		//Entering into First Password
+		driver.findElement(By.xpath("*//input[@id='firstpassword']")).sendKeys("aBc@2022");
+				
+		//Entering into Confirm Password
+		driver.findElement(By.xpath("*//input[@id='secondpassword']")).sendKeys("aBc@2022");
+						
 		
 		//driver.close();
 		//driver.quit();
