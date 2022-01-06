@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+S:\SQA Projects\Selenium Projects\demo.automationTest\.metadata\.plugins\org.eclipse.jdt.core
+1289320443.index
