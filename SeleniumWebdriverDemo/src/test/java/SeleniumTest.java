@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,11 +12,17 @@ public class SeleniumTest {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.google.com");
+		driver.manage().window().maximize();
+		
+		driver.get("http://demo.automationtesting.in/Register.html");
+		
+		//Entering First Name and Last Name
+		driver.findElement(By.xpath("*//input[@placeholder='First Name']")).sendKeys("Mehedi Hasan");
+		driver.findElement(By.xpath("*//input[@placeholder='Last Name']")).sendKeys("Rony");
 		
 		
-		driver.close();
-		driver.quit();
+		//driver.close();
+		//driver.quit();
 
 	}
 
