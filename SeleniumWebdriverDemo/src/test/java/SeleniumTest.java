@@ -42,6 +42,11 @@ public class SeleniumTest {
 		//Select Radio Button
 		driver.findElement(By.xpath("*//input[@value='Cricket']")).click();
 		
+		//Select drop-down
+		driver.findElement(By.xpath("*//div[@id = 'msdd']")).click();
+		driver.findElement(By.xpath("*//div[@id = 'msdd']/../div[2]/ul/li[1]/a[contains(text(), 'Arabic')]")).click();
+				
+		
 		//Select Skills
 		Select skills = new Select(driver.findElement(By.id("Skills")));
 		skills.selectByVisibleText("Java");
@@ -65,17 +70,15 @@ public class SeleniumTest {
 								
 						
 		
+		//Click to submit button
+		driver.findElement(By.id("submitbtn")).submit();
 		
 		
 		
-		//Select drop-down
-		driver.findElement(By.xpath("*//div[@id = 'msdd']")).click();
-		driver.findElement(By.xpath("*//div[@id = 'msdd']/../div[2]/ul/li[1]/a[contains(text(), 'Arabic')]")).click();
 		
 		
-		
-		//driver.close();
-		//driver.quit();
+		driver.close();
+		driver.quit();
 
 	}
 
